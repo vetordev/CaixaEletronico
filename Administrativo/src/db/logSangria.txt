@@ -1,0 +1,13 @@
+Data: 21072020, Valor: 10020109
+Data: 21092006, Valor: 9239
+ATM: 4, Data: 634, Valor: 634
+ATM: 21, Data: 21231212, Valor: 313333
+ATM: 32, Data: 02122009, Valor: 33332
+ATM: 212, Data: 310491, Valor: 321321
+ATM: 32123, Data: 312321, Valor: 333
+ATM: 32132142, Data: 654767, Valor: 42132
+ATM: asdasd, Data: asdasdas, Valor: dasdasd
+ATM: fdsafsdfsdf, Data: asdasd, Valor: asdasdasd
+ATM: adasdasd, Data: asdasdas, Valor: dasdasd
+ATM: asdasd, Data: asdasd, Valor: asdasdasd
+ATM: asdasdas, Data: asdasd, Valor: asdasdasd
