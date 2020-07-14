@@ -1,10 +1,10 @@
 # CaixaEletronico
 
 ## Integrantes
-- Andrei
+- Andrei Peçanha
 - Barbara Abi
-- Caio
-- Pietro
+- Caio Schissatti
+- Pietro di Paulo
 - Vitor da Silva
 - Vitoria Lopes
 
