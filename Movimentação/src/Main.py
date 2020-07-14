@@ -1,8 +1,8 @@
 import os
 import time
 
-from src.Cliente import Cliente
-from src.db.clientes import clientes
+from Movimentação.src.Cliente import Cliente
+from Movimentação.src.db.clientes import clientes
 
 class Main:
 
@@ -13,7 +13,7 @@ class Main:
       time.sleep(2)
       os.system("cls")
 
-      print("===Banco Digital===")
+      print("===Movimentação===")
       print("1 - Adicionar Cliente")
       print("2 - Alterar Cliente")
       print("3 - Excluir Cliente")

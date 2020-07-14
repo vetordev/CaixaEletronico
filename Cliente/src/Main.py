@@ -1,7 +1,7 @@
 import os
 import time
 
-from src.agencia import Agencia
+from Cliente.src.agencia import Agencia
 
 
 
@@ -14,7 +14,7 @@ class Main:
       time.sleep(2)
       os.system("cls")
 
-      print("===Banco Digital===")
+      print("===Cliente===")
       print("1 - Adicionar Banco/fintech")
       print("2 - Alterar Banco/fintech")
       print("3 - Excluir Banco/fintech")
@@ -27,7 +27,7 @@ class Main:
 
       if opcaoSelecionada == 1:
         self.adicionarCliente()
-      
+
 
 
       elif opcaoSelecionada == 2:
@@ -60,9 +60,8 @@ class Main:
     ie = input("inseira a incrição estadual da sua agência")
     self.agencia.adicionar_txt(nome,cnpj,ie)
     pass
-    
-    
-    
-    
-    
-  
+
+
+
+
+

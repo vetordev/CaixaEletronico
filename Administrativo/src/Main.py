@@ -2,7 +2,7 @@ import os
 import time
 import sys
 
-from src.Sangria import Sangria
+from Administrativo.src.Sangria import Sangria
 
 class Main:
 
@@ -13,7 +13,7 @@ class Main:
       time.sleep(2)
       os.system("cls")
 
-      print("===Banco Digital===")
+      print("===Administração===")
       print("1 - Registrar sangria")
       print("2 - Registrar entrada de cédulas")
       print("3 - Emitir comprovante de transação")
