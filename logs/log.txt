@@ -1,0 +1,7 @@
+Ativação mal-sucedida, 2020-08-08
+Ativação desnecessária, 2020-08-08
+Ativação bem-sucedida, 2020-08-23 16:43:44.179190
+
+Ativação mal-sucedida, 2020-08-25 16:53:45.735025
+Ativação bem-sucedida, 2020-08-25 16:54:09.592433
+Ativação desnecessária, 2020-08-25 16:54:28.566300

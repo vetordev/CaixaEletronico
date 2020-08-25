@@ -1,13 +1,16 @@
 import os
 import time
 import sys
+from source.ativar_caixa import AtivarCaixa
 
 class Main:
 
   # TODO Adicionar nova função para o MENU
   # TODO Chamar a classe de ativação antes de inicializar o MENU
   def init(self):
-
+    ativarCaixa = AtivarCaixa()
+    ativarCaixa.ativarCaixa()
+    
     while True:
       time.sleep(2)
       os.system("cls")
