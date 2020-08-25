@@ -1,44 +1,57 @@
 from datetime import datetime
+import sys
 # Só há uma tentativa de ativação
 
 class AtivarCaixa: 
 
-  # TODO método gerar logs de ativações
-
   def __init__(self): 
+    print('a')
     logs = open('./logs/log.txt', 'r')
     
+    # Recebe a ultima ativação bem-sucedida e a converte para o tipo datetime
     self.ultimaAtivacao = datetime.fromisoformat(self.buscarUltimaAtivacao(logs))
 
+    # Recebe a data atual
     self.dataAtual = datetime.now()
 
+    # Define o código de ativação do caixa eletrônico
     self.codigoAtivacao = '246IQ'    
-    print(self.ultimaAtivacao)
-    print(self.dataAtual)
     pass
   
+  # Método principal da classe
   def ativarCaixa(self):
 
-    # Caso faça mais de 1 dia desde a última ativação
+    '''
+      Executa o método verificarAtivacao() que retona True caso tiver feito mais de 1 dia desde a última ativação bem-sucedida
+    '''
     if(self.verificarAtivacao()):
 
-      # Caso o código de ativação esteja correto
+      '''
+        Executa o método exibirMenuDeAtivacao() que retorna True caso o código de ativação esteja correto
+      '''
       if(self.exibirMenuDeAtivacao()):
-        print('true')
+
         # Registra uma ativação bem-sucedida
         self.log('Ativação bem-sucedida')
         pass
+
+      # Caso o código de ativação esteja errado
       else: 
-        print('false')
+
         # Registra uma ativação mal-sucedida
         self.log('Ativação mal-sucedida')
+
+        # Fecha a aplicação
+        print('Código de ativação inválido.')
+        sys.exit()
         pass
       
       pass
-
+    
+    # Caso não faça 1 dia desde a última ativação bem-sucedida
     else: 
       
-      # Registra uma ativação não necessária
+      # Registra uma ativação desnecessária
       self.log('Ativação desnecessária')
       pass
     pass
@@ -72,13 +85,13 @@ class AtivarCaixa:
     return ultimaAtivacao
     pass
 
-  # Verifica se é necessário realizar a ativação do caixa eletrônico
+  # Método para verificar se é necessário realizar a ativação do caixa eletrônico
   def verificarAtivacao(self):
     
     # Diferença de dias entre a ultima ativação e tentativa atual
     dias = (self.dataAtual - self.ultimaAtivacao).days
-    print(dias)
 
+    # Verifica se faz mais de 1 dia desde a última ativação bem-sucedida
     if dias > 0:
       return True
       pass
@@ -87,7 +100,7 @@ class AtivarCaixa:
       return False
     pass
   
-  # Exibe um menu de ativação que recebe o código de ativação e o valida
+  # Método para exibir um menu de ativação que recebe o código de ativação e o valida
   def exibirMenuDeAtivacao(self): 
 
     # Recebe o código de ativação
@@ -103,7 +116,9 @@ class AtivarCaixa:
 
     pass
 
+  # Método para registrar uma tentativa de ativação
   def log(self, tipoAtivacao): 
+
     logs = open('./logs/log.txt', 'a')
     logs.write('\n{tipo}, {data}'.format(tipo=tipoAtivacao, data=self.dataAtual))
     pass
